@@ -22,9 +22,9 @@ router.post("/",(req,res)=>{
             console.log(err);
         }
         else{
-            console.log("added new for somereason");
-            console.log(newSlide);
-            res.redirect("/slide");
+            console.log("added new for some reason");
+            console.log("got to before the admin slide post requrest");
+            res.redirect("/admin/slide");
         }
     });
 });
@@ -55,16 +55,16 @@ router.get("/:slide_id/edit",(req,res)=>{
 router.put("/:slide_id",(req,res)=>{
     Slide.findByIdAndUpdate(req.params.slide_id,req.body.slide,(err,updatedSlide)=>{
         if(err){
-            res.redirect("/slide");
+            res.redirect("/admin/slide");
         }
         else{
-            res.redirect("/slide");
+            res.redirect("/admin/slide");
         }
     });
 });
 
 
-//DESTORY ROUTE
+//DESTROY ROUTE
 router.delete("/:slide_id", (req,res)=>{
     console.log("here");
     Slide.findByIdAndRemove(req.params.slide_id,(err,slideRemove)=>{
@@ -72,7 +72,8 @@ router.delete("/:slide_id", (req,res)=>{
             console.log(err);
         }
         else{
-            res.redirect("/slide");
+            console.log("direction")
+            res.redirect("/admin/slide");
         }
     });
 });

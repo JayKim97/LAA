@@ -1,7 +1,7 @@
 <% include ../partials/header %>
     <div class="ui main text container segment">
        <div class="ui huge header centering">Add Main Slide</div>
-       <form class="ui form" action="/slide" method="POST">
+       <form class="ui form" action="/admin/slide" method="POST">
            <div class="field">
                <label>Title</label>
                <input type="text" name="slide[title]" placeholder="title" required>
@@ -17,9 +17,9 @@
            <div class="ui small header centering">Button</div>
            <div class="field">
                <label>Button Name</label>
-               <input type="text" name="slide[btn_val]" placeholder="Button Name">
+               <input type="text" name="slide[button_value]" placeholder="Button Name">
                <label>Button Link</label>
-               <input type="text" name="slide[btn_link]" placeholder="Button Link">
+               <input type="text" name="slide[button_link]" placeholder="Button Link">
            </div>
            <label>Order</label>
            <div class="field">

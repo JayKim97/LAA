@@ -1,7 +1,7 @@
 <% include ../partials/header %>
     <div class="ui main text container segment">
        <div class="ui huge header centering">Edit <%=slide.title%></div>
-       <form class="ui form" action="/slide/<%=slide._id%>?_method=PUT" method="POST">
+       <form class="ui form" action="/admin/slide/<%=slide._id%>?_method=PUT" method="POST">
            <div class="field">
                <label>Title</label>
                <input type="text" name="slide[title]" placeholder="title" value="<%=slide.title%>" required>
@@ -17,9 +17,9 @@
            <div class="ui small header centering">Button</div>
            <div class="field">
                <label>Button Name</label>
-               <input type="text" name="slide[btn_val]" placeholder="Button Name" value="<%=slide.button.value%>">
+               <input type="text" name="slide[button_value_]" placeholder="Button Name" value="<%=slide.button_value%>">
                <label>Button Link</label>
-               <input type="text" name="slide[btn_link]" placeholder="Button Link" value="<%=slide.button.link%>">
+               <input type="text" name="slide[button_link_]" placeholder="Button Link" value="<%=slide.button_link%>">
            </div>
            <label>Order</label>
            <div class="field">
