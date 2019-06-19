@@ -10,6 +10,14 @@
   text-align: center;
 }
 
+.groupPic{
+  text-align: center;
+}
+
+.member{
+  width: 80%;
+}
+
 #nav-adj{
   height: 10vh;
 }

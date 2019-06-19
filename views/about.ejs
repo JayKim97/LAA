@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+<div class="groupPic">
+    <img class="member" src="http://laurieraccounting.com/wp-content/uploads/2017/10/IMG_1320.jpg" alt="">
+</div>
+<div class="ui container">
+    <div class="ui four cards">
+    <%if(members && members.length>0){%>
+        <%members.forEach((member)=>{%>
+            <div class="ui card">
+                <div class="image">
+                    <img src="<%=member.image%>">
+                </div>
+                <div class="content">
+                    <a class="header"><%=member.name%></a>
+                    <div class="description">
+                        <%=member.title%>
+                    </div>
+                    <div class="description">
+                        <%=member.email%>
+                    </div>
+                </div>
+            </div>
+        <%})%>
+    <%}%>
+    </div>   
+</div>
+<% include ./partials/footer %>
