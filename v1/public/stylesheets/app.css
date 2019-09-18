@@ -1,0 +1,72 @@
+.item{
+    border: none;
+}
+
+.ui.menu{
+    height: 7%;
+}
+
+.centering{
+  text-align: center;
+}
+
+.groupPic{
+  text-align: center;
+}
+
+.member{
+  width: 80%;
+}
+
+#nav-adj{
+  height: 10vh;
+}
+
+/* ========== */
+/* SlideShow */
+
+#slides{
+  height: 300px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.slide-image{
+  object-fit: cover;
+  position: center;
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+
+
+
+#landing-header {
+    z-index: 0;
+    position: fixed;
+    text-align: center;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+  
+#landing-header h1 {
+    color: #fff;
+}
+#landing-header h4 {
+    color: #fff;
+}
+  

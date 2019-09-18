@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+<div class="ui main text container centering">
+    <div class="ui huge header">Slides</div>
+    <a class="ui orange basic button" href="slide/new">Add New Slide</a>
+    <div class="ui top attached segment">
+    <div class="ui two column grid">
+            <%if(slides && slides.length >0){%>
+                <% slides.forEach((slide)=>{ %>
+                <div class="column centering">
+                    <div class="ui card .centering" style="margin: auto;">
+                        <div class="meta">
+                            <span class="date">Order: <%= slide.order%></span>
+                        </div>
+                        <div class="image">
+                            <img src="<%=slide.image%>">
+                        </div>
+                        <div class="content">
+                            <a class="header"><%= slide.title%></a>
+                            <div class="description">
+                                <%=slide.description%>
+                            </div>
+                            <a class="ui orange basic button" href="<%=slide.button_link%>"><%=slide.button_value%></a>
+                        </div>
+                        <div class="ui two bottom attached buttons">>
+                            <a class="ui attached yellow button" href="slide/<%=slide._id%>/edit">Edit</a>
+                            <form style="width:100%;" action="slide/<%=slide._id%>?_method=DELETE" method="POST">
+                                <input style="width:100%;" type="submit" class="attached ui button negative" value="Delete">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% }) %> 
+            <%}%>
+        </div>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>

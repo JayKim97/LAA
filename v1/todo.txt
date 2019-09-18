@@ -1,0 +1,33 @@
+about page: 
+ able to update and show multiple paragraphs with titles
+ make it possible to add pictures on top
+
+about/members 
+    main member display page using semantic ui cards
+    only show add member and edit to admin user
+    main group image route to able to edit
+    display image on the left
+    
+
+header page hold:
+
+<div class="ui fixed menu">
+            <div class="ui container">
+                <a href="/" class="item"><img id="logo" src="http://laurieraccounting.com/wp-content/uploads/2015/09/small-logo.jpg"></a>
+                <div class="right menu">
+                    <div class="ui pointing simple dropdown link item">
+                        <span href="/about" class="item">About</span>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item">Meet the Team</div>
+                        </div>
+                    </div>
+                    <a href="/" class="item">Membership</a>
+                    <a href="/" class="item">Hiring</a>
+                    <a href="/" class="item">Events</a>
+                    <a href="/" class="item">Partner</a>
+                    <a href="/" class="item">Contact</a>
+                </div>
+            </div>
+        </div>
+<div id="nav-adj"></div>

@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+<div class="ui main text container centering">
+    <div class="ui huge header">Sponsors</div>
+    <a class="ui orange basic button" href="sponsor/new">Add new Sponsor</a>
+    <div class="ui top attached segment">
+        <div class="ui two column grid">
+            <% if(sponsors && sponsors.length>0){ %>
+                <%sponsors.forEach((sponsor)=>{%>
+                    <div class="column centering">
+                        <div class="ui card .centering" style="margin: auto;">
+                            <div class="image">
+                                <<img src="<%=sponsor.image%>">
+                            </div>
+                            <div class="content">
+                                <a class="header"><%=sponsor.title%></a>
+                            </div>
+                            <div class="ui two bottom attached buttons">
+                                <a class="ui attached yellow button" href="sponsor/<%=sponsor._id%>/edit">Edit</a>
+                                <form style="width:100%;" action="sponsor/<%=sponsor._id%>?_method=DELETE" method="POST">
+                                    <input class="attached ui button negative" style="width: 100%;" type="submit" value="Delete">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <%})%>
+            <%}%>
+        <div>
+    </div>
+</div>
+<% include ../partials/footer %>

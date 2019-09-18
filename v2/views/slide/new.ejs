@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+    <div class="ui main text container segment">
+       <div class="ui huge header centering">Add Main Slide</div>
+       <form class="ui form" action="/admin/slide" method="POST">
+           <div class="field">
+               <label>Title</label>
+               <input type="text" name="slide[title]" placeholder="title" required>
+           </div>
+           <div class="field">
+               <label>Image</label>
+               <input type="text" name="slide[image]" placeholder="Image URL" required>
+           </div>
+           <div class="field">
+               <label>Description</label>
+               <textarea name="slide[description]" required></textarea>
+           </div>
+           <div class="ui small header centering">Button</div>
+           <div class="field">
+               <label>Button Name</label>
+               <input type="text" name="slide[button_value]" placeholder="Button Name">
+               <label>Button Link</label>
+               <input type="text" name="slide[button_link]" placeholder="Button Link">
+           </div>
+           <label>Order</label>
+           <div class="field">
+                <input type="number" name="slide[order]" min="1" step="1" value="1">
+            </div>
+           <div class="centering">
+               <input class="ui violet basic button" type="submit" value="Submit">
+           </div>
+         </form>
+    </div>
+<% include ../partials/footer %>

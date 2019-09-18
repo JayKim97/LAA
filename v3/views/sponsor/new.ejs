@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+    <div class="ui main text container segment">
+        <div class="ui huge header centering">Add new Sponsor</div>
+        <form class="ui form" action="/admin/sponsor" method="POST">
+            <div class="field">
+                <label>Sponsor Name</label>
+                <input type="text" name="sponsor[title]" placeholder="title" required>
+            </div>
+            <div class="field">
+               <label>Image</label>
+               <input type="text" name="sponsor[image]" placeholder="Image URL" required>
+           </div>
+           <div class="centering">
+               <input class="ui violet basic button" type="submit" value="Submit">
+           </div>
+        </form>
+    </div>
+<% include ../partials/footer %>

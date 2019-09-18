@@ -1,0 +1,49 @@
+<div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div
+            class="ui stackable  divided equal height stackable grid"
+          >
+            <div class="seven wide column">
+              <h4 class="ui inverted header left aligned">Social Media</h4>
+              <div class="">
+                <ul class="social-icons">
+                  <li><a href="https://www.facebook.com/pages/Laurier-Accounting-Association/180670421988693" target="_blank"><img src="/icons/008-facebook.png"></a></li>
+                  <li><a href="https://twitter.com/WLUaccounting" target="_blank"><img src="/icons/002-twitter.png"></a></li>
+                  <li><a href="https://instagram.com/wluaccounting/" target="_blank"><img src="/icons/011-instagram.png"></a></li>
+                  <li><a href="https://www.linkedin.com/groups?gid=4046816&mostPopular=&trk=tyah&trkInfo=tarId%3A1410551101328%2Ctas%3Alaurier%20accounting%20association%2Cidx%3A1-1-1" target="_blank"><img src="/icons/010-linkedin.png"></a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="seven wide column">
+              <h4 class="ui inverted header"> </h4>
+              <p>
+                © Copyright Laurier Accounting Association<br />
+                Created by C.J.Kim
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // fix menu when passed
+        $(".masthead").visibility({
+          once: false,
+          onBottomPassed: function() {
+            $(".fixed.menu").transition("fade in");
+          },
+          onBottomPassedReverse: function() {
+            $(".fixed.menu").transition("fade out");
+          }
+        });
+
+        // create sidebar and attach to menu open
+        $(".ui.sidebar").sidebar("attach events", ".toc.item");
+      });
+    </script>
+  </body>
+</html>
