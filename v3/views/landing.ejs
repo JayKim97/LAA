@@ -2,13 +2,23 @@
 <!-- slide show container-->
 
 <!-- TODO slide show--->
-        <div class="ui text container">
-          <h1 class="ui header">Event banner placeholder</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </h2>
-          <div class="ui huge primary button">
-            Place Holder<i class="right arrow icon"></i>
-          </div>
-        </div>
+      <div class="ui vertical stripe segment slide" id="slideshow">
+        <%if(slides && slides.length >0){%>
+          <% slides.forEach((slide)=>{ %>
+            <div class="slide" style="background-image: url('<%=slide.image%>')">
+            <br>
+            <br>
+              <div class="ui vertical segment centering" >
+                <div class="ui container">
+                  <h2 class="ui header"><%= slide.title%></h2>
+                  <p>
+                   <%=slide.description%>
+                   </p>
+                </div>
+              </div> 
+            </div>
+          <% }) %> 
+        <%}%>
       </div>
       <div class="ui vertical stripe segment">
         <div class="ui text container">
@@ -47,4 +57,3 @@
       
 
 <% include ./partials/footer %>
-

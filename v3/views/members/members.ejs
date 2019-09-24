@@ -3,13 +3,11 @@
 <h4 class="ui horizontal header divider">
     <a class="ui orange basic button" href="members/new">Add New Member</a>
 </h4>
-<div class="ui  container">
-
-    <div class="ui three column grid">
-    <%if(members && members.length > 0){%>
-        <% members.forEach((member)=>{%>
-            <div class="column">
-                <div class="ui cards">
+<div class="ui container">
+    <div class="column">
+        <div class="ui centered cards">
+            <%if(members && members.length > 0){%>
+                <% members.forEach((member)=>{%>
                     <div class="card">
                         <div class="content">
                             <img class="right floated mini ui image" src="<%=member.image%>">
@@ -30,13 +28,11 @@
                             </form>
                         </div>
                     </div>
-                </div>
-            </div>
-        <%})%>
-    <%}%>
-        
-        
+                <%})%>
+            <%}%>
+       </div>
     </div>
+</div>
     <br>
 </div>
 <% include ../partials/footer %>

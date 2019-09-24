@@ -35,36 +35,7 @@
 a{
   color: black;
 }
-/* ========== */
-/* SlideShow */
 
-#slides{
-  height: 300px;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-}
-
-.slide{
-  position: absolute;
-  left: 0px;
-  top:0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 1;
-}
-
-.slide-image{
-  object-fit: cover;
-  position: center;
-}
-
-.showing{
-  opacity: 1;
-  z-index: 2;
-}
 
 
 
@@ -208,20 +179,40 @@ body {
   margin-right: 5px;
 }
 
-.banner-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("http://laurieraccounting.com/wp-content/uploads/2017/10/IMG_1320.jpg");
-  
-  /* Set a specific height */
-	height: 40em;
+section {
+  display: flex;
+  height: 60vh;
+} 
 
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center center;
-  background-repeat: no-repeat;
+.bg{
+  background-image: url("http://laurieraccounting.com/wp-content/uploads/2017/10/IMG_1320.jpg");
   background-size: cover;
-  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #partnerContain{
   padding: 5%,10% !important;
+}
+
+/* sldieshow */
+/* sldieshow */
+.slide{
+  height: 50vh;
+}
+
+#slideshow { 
+  padding: 0;
+  position: relative;  
+  height: 50vh;
+}
+
+.slide { 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.toppad{
+  padding-top: 20%;
 }

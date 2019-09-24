@@ -1,58 +1,72 @@
 <% include ../partials/header %>
-<div class="ui container banner-image">
-<br>
-        </div>
+
+<section>
+  <div class="ui container bg">
+
+  </div>
+</section>
+
+<div class="ui vertical segment" style="text-align:left">
+    <div class="ui container">
+        <h2 class="ui header">Laurier Accounting Association</h2>
+        <p>
+            We are a student-run organization dedicated to connecting the best and brightest students at the School of Business and Economics with the accounting industry.
+        </p>
     </div>
-    <div class="ui container vertical stripe quote segment">
+    <br>
+    <div class="ui container">
+        <h3 class="ui header">Our Mission</h3>
+        <p>
+            As the largest member based club at Wilfrid Laurier University, we are committed to offering value to our members and partners. Through our membership database and interactive events, we bring together students and employers and help build meaningful connections.
+        </p>
+    </div>
+    <br>
+    <div class="ui container">
+        <h3 class="ui header">What We Offer</h3>
+        <p>
+        We host and facilitate a wide variety of events throughout the school year, some of which include our flagship Co-op Dinner, the CPA Finance Panel, the Tax Clinic, various speaker series, socials, information sessions and much more.
+        </p>
+    </div>
+    <br>
+    <div class="ui container">
+        <h3 class="ui header">Continuing Success</h3>
+        <p>
+        Since 1993, Laurier graduates have taken away more UFE gold medals for the best mark in Canada than any other Canadian university. It is our privilege to be a part of the Laurier excellence.
+        </p>
+    </div>
+    <br>
+    <div class="ui container">
+        <h3 class="ui header">Your Laurier Club for Everything Accounting</h3>
+        <p>
+        We are your one-stop-shop for everything and anything accounting at Laurier. From events to resources and from contacts to questions, please do not hesitate to reach out to us. We would love to hear from you.
+        </p>
+    </div>
+
 <h4 class="ui horizontal header divider">
-            <a href="#root">Our Team</a>
-          </h4>
-        <div class="ui cards">
-            <div class="card">
-                <div class="content">
-                    <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
-                    <div class="header">
-                        Michelle Tran
-                    </div>
-                    <div class="meta">
-                        WHatever you do
-                    </div>
-                    <div class="description">
-                        Position detail
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
-                    <div class="header">
-                        Michelle Tran
-                    </div>
-                    <div class="meta">
-                        WHatever you do
-                    </div>
-                    <div class="description">
-                        Position detail
+    <a href="#root">Our Team</a>
+</h4>
+<div class="ui container"> 
+    <div class="ui centered cards">
+        <%if(members && members.length > 0){%>
+            <% members.forEach((member)=>{%>
+                <div class="card">
+                    <div class="content">
+                        <img class="right floated mini ui image" src="<%=member.image%>">
+                        <div class="header">
+                            <%=member.name%>
+                        </div>
+                        <div class="meta">
+                            <%=member.position%>
+                        </div>
+                        <div class="description">
+                            <%=member.email%>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
-                    <div class="header">
-                        Michelle Tran
-                    </div>
-                    <div class="meta">
-                        WHatever you do
-                    </div>
-                    <div class="description">
-                        Position detail
-                    </div>
-                </div>
-            </div>
-      </div>
-     <h4 class="ui horizontal header divider">
-            <a href="#root">-</a>
-          </h4>
+            <%})%>
+        <%}%>
+    </div>
+</div>
+    <br>
 </div>
 <% include ../partials/footer %>
