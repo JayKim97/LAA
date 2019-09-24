@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+    <div class="ui main text container segment">
+       <div class="ui huge header centering">Add Memeber</div>
+       <form class="ui form" action="/about/members" method="POST">
+           <div class="field">
+               <label>Title</label>
+               <input type="text" name="member[position]" placeholder="position" required>
+           </div>
+           <div class="field">
+               <label>name</label>
+               <input type="text" name="member[name]" placeholder="name" required>
+           </div>
+           <div class="field">
+               <label>email</label>
+               <input type="text" name="member[email]" placeholder="email" required>
+           </div>
+           <div class="field">
+               <label>Image</label>
+               <input type="text" name="member[image]" placeholder="Image URL" required>
+           </div>
+           <div class="centering">
+               <input class="ui violet basic button" type="submit" value="Submit">
+           </div>
+         </form>
+    </div>
+<% include ../partials/footer %>

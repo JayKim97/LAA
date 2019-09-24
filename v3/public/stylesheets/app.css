@@ -18,10 +18,23 @@
   width: 80%;
 }
 
+.leftmost{
+  padding-left:10%;
+}
+.rightmost{
+  padding-right:10% !important;
+}
+#paddingoverwrite{
+  padding: 2em 0em;
+}
+
 #nav-adj{
   height: 10vh;
 }
 
+a{
+  color: black;
+}
 /* ========== */
 /* SlideShow */
 
@@ -207,4 +220,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+#partnerContain{
+  padding: 5%,10% !important;
 }

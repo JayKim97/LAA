@@ -10,7 +10,8 @@ const   express         = require("express"),
 //REQUIRE ROUTES
 const   indexRoutes = require("./routes/index"),
         slideRoutes = require("./routes/slide"),
-        sponsorRoutes = require("./routes/sponsor");
+        sponsorRoutes = require("./routes/sponsor"),
+        partnerRoutes = require("./routes/partners");
 
 
 //ROUTE REQUIREMENTS
@@ -47,6 +48,7 @@ app.use((req,res,next)=>{
 app.use(indexRoutes);
 app.use("/admin/slide",slideRoutes);
 app.use("/admin/sponsor",sponsorRoutes);
+app.use("/partners", partnerRoutes);
 
 
  app.listen(3000,()=>{

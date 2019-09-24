@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const MemberSchema = new mongoose.Schema({
-    title: String,
+    position: String,
     name: String,
     email: String,
     image: String

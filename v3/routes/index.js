@@ -15,15 +15,26 @@ router.get("/",(req,res)=>{
         }
     })
 });
+//events page
+router.get("/events", (req,res)=>{
+    res.render("events/events");
+});
 
 
 //main entry for about 
 router.get("/about",(req,res)=>{
-    res.render("about/about");
+    Member.find({},(err,allMember)=>{
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.render("about/about",{ members:allMember});
+        }
+    });
 });
 
-//main entry for members
-router.get("/about/members", (req,res)=>{
+//view all members
+router.get("/about/members",(req,res)=>{
     Member.find({},(err,allMember)=>{
         if(err){
             console.log(err);
@@ -33,15 +44,49 @@ router.get("/about/members", (req,res)=>{
         }
     });
 });
+
+
+router.post("/about/members",(req,res)=>{
+    Member.create(req.body.member,(err,newMember)=>{
+        if(err){
+            console.log(err);
+        }
+        else{
+            console.log("added new");
+            res.redirect("/about/members");
+        }
+    });
+});
+
+//create new members
+router.get("/about/members/new",(req,res)=>{
+    res.render("about/members-new.ejs");
+});
+
+router.get("/:member_id",(req,res)=>{
+    res.send("GET REQUESTED");
+});
+
+//Update route
+router.put("/:member_id",(req,res)=>{
+    Member.findByIdAndUpdate(req.params.member_id,req.body.slide,(err,updateMember)=>{
+        if(err){
+            console.log("update error")
+            res.redirect("/about/members");
+        }
+        else{
+            res.redirect("/about/members")
+        }
+    });
+});
+
 //TODO require admin access
-router.get("/about/members/edit", (req,res)=>{
+router.get("/about/edit", (req,res)=>{
     res.render("about/edit");
 });
 
-//events page
-router.get("/events", (req,res)=>{
-    res.render("events/events");
-});
+
+
 
 //middleware
 

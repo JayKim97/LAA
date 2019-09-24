@@ -1,27 +1,35 @@
 <% include ../partials/header %>
-<div class="groupPic">
-    <img class="member" src="http://laurieraccounting.com/wp-content/uploads/2017/10/IMG_1320.jpg" alt="">
-</div>
-<div class="ui container">
-    <div class="ui four cards">
-    <%if(members && members.length>0){%>
-        <%members.forEach((member)=>{%>
-            <div class="ui card">
-                <div class="image">
-                    <img src="<%=member.image%>">
-                </div>
-                <div class="content">
-                    <a class="header"><%=member.name%></a>
-                    <div class="description">
-                        <%=member.title%>
-                    </div>
-                    <div class="description">
-                        <%=member.email%>
+<br>
+<h4 class="ui horizontal header divider">
+    <a class="ui orange basic button" href="members/new">Add New Member</a>
+</h4>
+<div class="ui  container">
+
+    <div class="ui three column grid">
+    <%if(members && members.length > 0){%>
+        <% members.forEach((member)=>{%>
+            <div class="column">
+                <div class="ui cards">
+                    <div class="card">
+                        <div class="content">
+                            <img class="right floated mini ui image" src="<%=member.image%>">
+                            <div class="header">
+                                <%=member.name%>
+                            </div>
+                            <div class="meta">
+                                <%=member.position%>
+                            </div>
+                            <div class="description">
+                                <%=member.email%>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         <%})%>
     <%}%>
-    </div>   
-</div>
+        
+        
+    </div>
+    <br>
 <% include ../partials/footer %>
