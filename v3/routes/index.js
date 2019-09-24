@@ -33,52 +33,6 @@ router.get("/about",(req,res)=>{
     });
 });
 
-//view all members
-router.get("/about/members",(req,res)=>{
-    Member.find({},(err,allMember)=>{
-        if(err){
-            console.log(err);
-        }
-        else{
-            res.render("about/members",{ members:allMember});
-        }
-    });
-});
-
-
-router.post("/about/members",(req,res)=>{
-    Member.create(req.body.member,(err,newMember)=>{
-        if(err){
-            console.log(err);
-        }
-        else{
-            console.log("added new");
-            res.redirect("/about/members");
-        }
-    });
-});
-
-//create new members
-router.get("/about/members/new",(req,res)=>{
-    res.render("about/members-new.ejs");
-});
-
-router.get("/:member_id",(req,res)=>{
-    res.send("GET REQUESTED");
-});
-
-//Update route
-router.put("/:member_id",(req,res)=>{
-    Member.findByIdAndUpdate(req.params.member_id,req.body.slide,(err,updateMember)=>{
-        if(err){
-            console.log("update error")
-            res.redirect("/about/members");
-        }
-        else{
-            res.redirect("/about/members")
-        }
-    });
-});
 
 //TODO require admin access
 router.get("/about/edit", (req,res)=>{

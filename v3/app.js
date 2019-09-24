@@ -11,6 +11,7 @@ const   express         = require("express"),
 const   indexRoutes = require("./routes/index"),
         slideRoutes = require("./routes/slide"),
         sponsorRoutes = require("./routes/sponsor"),
+        membersRoutes = require("./routes/member")
         partnerRoutes = require("./routes/partners");
 
 
@@ -48,6 +49,7 @@ app.use((req,res,next)=>{
 app.use(indexRoutes);
 app.use("/admin/slide",slideRoutes);
 app.use("/admin/sponsor",sponsorRoutes);
+app.use("/admin/members",membersRoutes);
 app.use("/partners", partnerRoutes);
 
 

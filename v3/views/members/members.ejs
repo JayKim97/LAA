@@ -23,6 +23,12 @@
                                 <%=member.email%>
                             </div>
                         </div>
+                        <div class="ui two bottom attached buttons">>
+                            <a class="ui attached yellow button" href="members/<%=member._id%>/edit">Edit</a>
+                            <form style="width:100%;" action="members/<%=member._id%>?_method=DELETE" method="POST">
+                                <input style="width:100%;" type="submit" class="attached ui button negative" value="Delete">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,4 +38,5 @@
         
     </div>
     <br>
+</div>
 <% include ../partials/footer %>
